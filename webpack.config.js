@@ -3,19 +3,21 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack           = require('webpack');
 const path              = require('path');
 
-const ENV = process.env.NODE_ENV || 'development';
+const NODE_ENV = process.env.NODE_ENV || 'development';
 
 const extractSass = new ExtractTextPlugin({
   filename: "[name].css",
-  disable: ENV === 'development',
+  disable: NODE_ENV === 'development',
   allChunks: true
 });
 
 module.exports = {
-  entry: './src/app.js',
+  entry: {
+    app: './src/app.js'
+  },
   output: {
     path: path.resolve(__dirname, 'public'),
-    filename: 'bundle.js'
+    filename: '[name].js'
   },
   plugins: [
     extractSass,
