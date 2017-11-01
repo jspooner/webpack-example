@@ -1,6 +1,5 @@
 import bar from './bar';
-require('./css/reset.css');
-require('./css/styles.css');
+require('./css/main.scss');
 
 
 bar();
