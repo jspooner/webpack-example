@@ -16,8 +16,8 @@
   },
   "scripts": {
     "server": "webpack-dev-server --hot --inline --progress --config webpack.dev.config.js --content-base public"
+  },
+  "dependencies": {
+    "mapbox-gl": "^0.41.0"
   }
 }
-
-
-
